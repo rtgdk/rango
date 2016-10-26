@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+{% extends 'rango/base2.html' %}
+	<html>
+	<head>
+		{% block title %}Restricted{% endblock %}
+	</head>
+	<body>
+	{% block body_block %}
+	{% if user.is_authenticated %}
+	<h1>You are logged in as {{ user }}</h2>
+	{%else%}
+	<h2>You are not logged in.Please Log in/register below.</h2>
+	{%endif%}
+	{% endblock %}
+	</body>
+	</html>
+
